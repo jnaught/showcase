@@ -522,7 +522,7 @@ Let's begin by rendering our component's outline.
 render() {
   <div className="puzzleBox evenAndOddPB">
     <h4> Evens and Odds </h4>
-    <input className="inputLine"></input>
+    <input className="inputLine" ></input>
     <button className="confirmationButton"> Split </button>
     <span className="resultsBox"></span>
     <span className="resultsBox"></span>
@@ -566,7 +566,7 @@ Next let's update our `input` element to handle user input. In React you can use
 render() {
   <div className="puzzleBox evenAndOddPB">
     <h4> Evens and Odds </h4>
-    <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+    <input className="inputLine" onChange></input>
     <button className="confirmationButton"> Split </button>
     <span className="resultsBox"> Evens: { JSON.stringify(this.state.evenArray) } </span>
     <span className="resultsBox"> Odds: { JSON.stringify(this.state.oddArray) } </span>
