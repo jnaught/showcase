@@ -14,10 +14,10 @@ export default class FilterString extends Component{
     }
         //create handlers
         //userInput change handler
-        changeHandler(value){
+        handleChange(value){
             this.setState({userInput: value})
         }
-        filterNames(userInput){
+        filterFruit(userInput){
             var fruit = this.state.fruit;
             var filteredFruit = [];
             for(var i = 0; i < fruit.length; i++){
@@ -36,8 +36,8 @@ export default class FilterString extends Component{
             <div className="puzzleBox filterStringPB">
             <span className="puzzleText">Fruits: {JSON.stringify(this.state.fruit, null,10)}</span>
             <input className="inputLine" onChange={ (event) => this.handleChange(event.target.value)}></input>
-            <button className="confirmationButton" onClick={ () => {this.filterNames(this.state.userInput)}}> </button>
-            <span className="resultsBox filterStringRB">Filtered Fruits: {this.state.filteredFruit}</span>
+            <button className="confirmationButton" onClick={ () => {this.filterFruit(this.state.userInput)}}> Filter</button>
+            <span className="resultsBox filterStringRB">Filtered Fruits: {JSON.stringify(this.state.filteredArray)}</span>
             <h4> Filter String </h4>
 
 
